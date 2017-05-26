@@ -1,0 +1,39 @@
+	<ion-view view-title="{{ post.title.rendered }}" hide-nav-bar="false" >
+		<!-- content -->
+		<ion-content delegate-handle="top"   id="page-post_singles" class="page-post_singles">
+		
+    
+<ion-refresher pulling-text="Pull to refresh..."  on-refresh="doRefresh()"></ion-refresher>
+
+<div class="list card">
+
+    <div class="item item-avatar">
+        <img alt="" ng-src="{{post.x_gravatar}}" />
+        <h2 ng-bind-html="post.title.rendered | to_trusted"></h2>
+        <p> {{post.x_date}}</p>		
+	</div>
+
+    <div class="item noborder">
+        <img class="full-image" ng-src="{{post.x_featured_media_large}}" zoom-view="true" zoom-src="{{post.x_featured_media_original}}"/>
+    </div>
+    
+    <div class="item item-text-wrap noborder to_trusted" ng-bind-html="post.content.rendered | strHTML"></div>
+    <div class="item noborder">
+        by <strong ng-bind-html="post.x_author | strHTML"></strong>
+    </div>
+    
+</div>
+    
+    
+<div class="list card">
+	<div class="item tabs tabs-secondary tabs-icon-left tabs-stable">
+        <a class="tab-item" run-social-sharing message="{{post.link}}"><i class="icon ion-android-share-alt"></i> Share</a>
+		<a class="tab-item" ng-click="addToDbVirtual(post);"><i class="icon ion-ios-star"></i> Bookmark</a>
+		
+	</div>
+</div>    
+<br/><br/><br/>
+    
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

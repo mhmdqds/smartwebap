@@ -1,0 +1,15 @@
+	<ion-view view-title="{{ user.name }}" hide-nav-bar="false" >
+		<!-- content -->
+		<ion-content delegate-handle="top"   id="page-user_singles" class="page-user_singles">
+		
+			<ion-refresher pulling-text="Pull to refresh..."  on-refresh="doRefresh()"></ion-refresher>
+			<div class="list ">
+					<div class="item item-divider"  ng-bind-html="user.name | to_trusted">{{user.name}}</div>
+					<div class="item item-button"><button class="button button-colorful ink-dark" ng-click="openAppBrowser(user.url)">url</button></div>
+					<div class="item item-text-wrap noborder to_trusted" ng-bind-html="user.description | strHTML"></div>
+					<div class="item noborder"><img class="full-image" ng-src="{{user.avatar_urls[96]}}"  zoom-view="true" zoom-src="{{user.avatar_urls[96]}}"/></div>
+			</div>
+
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

@@ -1,0 +1,20 @@
+	<ion-view view-title="{{ categorie.name }}" hide-nav-bar="false" >
+		<!-- content -->
+		<ion-content delegate-handle="top"   id="page-categorie_singles" class="page-categorie_singles">
+		
+			<ion-refresher pulling-text="Pull to refresh..."  on-refresh="doRefresh()"></ion-refresher>
+			<div class="hero slide-up calm-bg" style="background-image: url('data/images/background/bg0.jpg');">
+				<div class="padding-horizontal padding-bottom content content">
+					<img alt="" class="avatar" ng-src="data/images/logo_smart_web_3.jpg" />
+					<h3><a class="light">{{ categorie.name }}</a></h3>
+					<h4 class="light">&nbsp;</h4>
+				</div>
+			</div>
+			<div class="list ">
+					<div class="item item-divider"  ng-bind-html="categorie.name | to_trusted">{{categorie.name}}</div>
+					<div class="item item-text-wrap noborder to_trusted" ng-bind-html="categorie.description | strHTML"></div>
+			</div>
+
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

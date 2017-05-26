@@ -1,0 +1,39 @@
+	<ion-view view-title="Contact Us" hide-nav-bar="false" >
+		<!-- content -->
+		<ion-content delegate-handle="top"   id="page-form_contact_us" class="has-header page-form_contact_us">
+		
+		<div class="list list"  >
+			<form ng-submit="submitContact_us()">
+
+			<!-- input phone -->
+			<label class="item item-input item-floating-label">
+				<span class="input-label">phone</span>
+				<input type="text" ng-model="form_contact_us.phone" name="phone" placeholder="phone" ng-required="true"/>
+			</label>
+			<!-- ./input phone -->
+
+			<!-- input tital -->
+			<label class="item item-input item-floating-label">
+				<span class="input-label">tital</span>
+				<input type="text" ng-model="form_contact_us.tital" name="tital" placeholder="tital" ng-required="true"/>
+			</label>
+			<!-- ./input tital -->
+
+			<!-- input mesaage -->
+			<label class="item item-input item-floating-label">
+				<span class="input-label">mesaage</span>
+				<input type="text" ng-model="form_contact_us.mesaage" name="mesaage" placeholder="mesaage" ng-required="true"/>
+			</label>
+			<!-- ./input mesaage -->
+
+			<!-- input submit -->
+			<div class="item item-button noborder">
+				<button class="button button-assertive ink">Submit</button>
+			</div>
+			<!-- ./input submit -->
+			</form>
+		</div>
+		<br/><br/><br/><br/>
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>
